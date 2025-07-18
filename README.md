@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task Tracker
 
 A full-stack Task Tracker application with an Oracle database backend and a React frontend.
@@ -122,3 +123,8 @@ A full-stack Task Tracker application with an Oracle database backend and a Reac
 
 ## Credits
 - Built with Node.js, Express, OracleDB, and React. "# TaskTrackerBackend" 
+=======
+1. git clone https://github.com/jenricana/TaskTrackerWebApplication.git
+
+2. cd TaskTrackerWebApplication
+>>>>>>> 5b7e5fd8248d9ba54adc3cf65d4e80d76c0a1825
