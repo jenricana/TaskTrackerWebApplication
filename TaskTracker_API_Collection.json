@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "tasktracker-api-collection",
+		"name": "TaskTracker API Collection",
+		"description": "API collection for TaskTracker application with tasklist endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/tasklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasklist"
+					]
+				},
+				"description": "Retrieve all tasks from the tasklist"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/tasklist/{{taskId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasklist",
+						"{{taskId}}"
+					]
+				},
+				"description": "Retrieve a specific task by its TaskId"
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"TaskNo\": \"002\",\n  \"TaskName\": \"New Task\",\n  \"TaskDescription\": \"This is a new task description\",\n  \"Status\": \"In Progress\",\n  \"ActiveStatus\": true,\n  \"TaskOwner\": \"Jane Smith\",\n  \"CreatedBy\": \"Current User\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/tasklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasklist"
+					]
+				},
+				"description": "Create a new task in the tasklist"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"TaskName\": \"Updated Task Name\",\n  \"Status\": \"Completed\",\n  \"ActiveStatus\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/tasklist/{{taskId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasklist",
+						"{{taskId}}"
+					]
+				},
+				"description": "Update an existing task by its TaskId"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/tasklist/{{taskId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasklist",
+						"{{taskId}}"
+					]
+				},
+				"description": "Delete a task by its TaskId"
+			},
+			"response": []
+		},
+		{
+			"name": "Homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				},
+				"description": "Test the homepage endpoint"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "taskId",
+			"value": "your-task-id-here",
+			"description": "Replace with actual TaskId when testing specific task endpoints"
+		}
+	]
+} 
