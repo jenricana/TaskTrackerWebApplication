@@ -6,7 +6,7 @@ CREATE TABLE tasks (
     TaskId VARCHAR2(36) PRIMARY KEY,
     TaskNo VARCHAR2(50) NOT NULL,
     TaskName VARCHAR2(200) NOT NULL,
-    TaskDescription CLOB,
+    TaskDescription VARCHAR2(200) NOT NULL,
     Status VARCHAR2(50) DEFAULT 'Pending',
     ActiveStatus NUMBER(1) DEFAULT 1,
     TaskOwner VARCHAR2(100),
